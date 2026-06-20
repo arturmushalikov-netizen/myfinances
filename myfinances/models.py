@@ -18,7 +18,7 @@ class MonthlyFin(models.Model):
         ordering="start_date",
         )
     def last_montly_fin(self):
-        return self.start_date <= timezone.now() <= self.end_date
+        return self.start_date <= timezone.now().date() <= self.end_date
     
     class Meta:
         get_latest_by = "-end_date"
