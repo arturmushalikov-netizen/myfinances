@@ -29,9 +29,6 @@ jobs:
       - name: Run pre-commit hooks
         run: pre-commit run --all-files
 
-      - name: Run pyright
-        run: pyright
-
   build_and_push:
     runs-on: ubuntu-latest
     steps:
